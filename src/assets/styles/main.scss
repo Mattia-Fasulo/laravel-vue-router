@@ -1,0 +1,25 @@
+// COLORS
+$bg-color: #bb3232;
+$text-color: #333;
+
+//Typography
+
+// src/assets/styles/main.scss
+@use './partials/variables' as *;
+
+$fa-font-path: '../webfonts';
+@import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '@fortawesome/fontawesome-free/scss/solid.scss';
+
+@import 'bootstrap/scss/bootstrap';
+
+body{
+    background-color: $bg-color;
+}
+// ...style here
+
+
+
+
+
+
