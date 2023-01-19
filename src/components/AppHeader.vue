@@ -39,7 +39,7 @@ export default {
                     routeName: 'projects-list'
                 },
                 {
-                    label: 'Contac Us',
+                    label: 'Contact Us',
                     routeName: 'contact-us'
                 },
                 {

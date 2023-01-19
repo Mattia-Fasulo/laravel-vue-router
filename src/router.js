@@ -27,7 +27,7 @@ const router = createRouter({
             component: ProjectsListPage
         },
         {
-            path: '/contact',
+            path: '/contacts',
             name: 'contact-us',
             component: ContactUsPage
         },
