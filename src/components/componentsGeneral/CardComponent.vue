@@ -1,6 +1,6 @@
 <template>
     
-        <div class="col-12 col-md-4 d-flex justify-content-center mt-5" v-for="(project, index) in obj" :key="index">
+        <div class="col-12 col-md-4 d-flex justify-content-center" v-for="(project, index) in obj" :key="index">
             <div class="card" style="width: 18rem;">
                 <img :src="`${store.imagePath}${project.cover_image}`" class="card-img-top" :alt="project.title">
                 <div class="card-body d-flex flex-column align-items-center">

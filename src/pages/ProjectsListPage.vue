@@ -1,6 +1,6 @@
 <template>
     <section>
-        <h1 class="text-center my-3">Projects List</h1>
+        <h1 class="text-center mt-3">Projects List</h1>
         <div class="row">
             <CardComponent :obj="this.projects"/>
         </div>

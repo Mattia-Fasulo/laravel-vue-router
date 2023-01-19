@@ -4,9 +4,9 @@
 <section class="contact_me pt-3">
         <div class="inner-wrapper p-3 bg-light border border-secondary">
             <div class="container-fluid text-center"> 
-                <!-- <div v-if="success" class="alert alert-success text-start" role="alert">
+                <div v-if="success" class="alert alert-success text-start" role="alert">
                     The message has been successfully sent!
-                </div>                -->
+                </div>               
                 <div class="row">
                     <form class="col-12 text-start" @submit.prevent="sendForm()">
                         <div class="mb-3">
