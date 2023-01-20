@@ -2,12 +2,22 @@
     <section>
         <h1 class="text-center mt-3">Projects List</h1>
         <div class="row">
-            <CardComponent :obj="this.projects"/>
+            <CardComponent :obj="this.projects" />
         </div>
         <nav aria-label="Page-navigation" class="d-flex justify-content-center mt-5">
             <ul class="pagination">
-                <!-- <li class="page-item"><a class="page-link" href="#">Previous</a></li> -->
-                <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{ n }}</a></li>
+                <li class="page-item" :class="{ 'disabled': currentPage === 1 }">
+                    <button class="page-link" :disabled="currentPage === 1"
+                        @click="getProjects(currentPage - 1)">Previous
+                    </button>
+                </li>
+                <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{ n }}</a>
+                </li>
+                <li class="page-item" :class="{ 'disabled': currentPage === lastPage }">
+                    <button class="page-link" :disabled="currentPage === lastPage"
+                        @click="getProjects(currentPage + 1)">Next
+                    </button>
+                </li>
             </ul>
         </nav>
 
@@ -22,8 +32,8 @@ import CardComponent from '../components/componentsGeneral/cardComponent.vue';
 
 export default {
     name: "ProjectsListPage",
-    components: { 
-        CardComponent 
+    components: {
+        CardComponent
     },
     data() {
         return {
@@ -45,17 +55,11 @@ export default {
                 this.total = response.data.result.total;
             });
         },
-        truncateContent(text) {
-            if (text.length > this.contentMaxLen) {
-                return text.substr(0, this.contentMaxLen) + "...";
-            }
-            return text;
-        }
     },
     mounted() {
         this.getProjects(1);
     },
-    
+
 }
 </script>
 
