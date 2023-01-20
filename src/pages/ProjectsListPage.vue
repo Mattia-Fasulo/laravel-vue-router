@@ -11,7 +11,7 @@
                         @click="getProjects(currentPage - 1)">Previous
                     </button>
                 </li>
-                <li class="page-item" v-for="n in lastPage"><a class="page-link" @click="getProjects(n)">{{ n }}</a>
+                <li class="page-item" v-for="n in lastPage"><a class="page-link" :class="{'active' : currentPage === n}" @click="getProjects(n)">{{ n }}</a>
                 </li>
                 <li class="page-item" :class="{ 'disabled': currentPage === lastPage }">
                     <button class="page-link" :disabled="currentPage === lastPage"
