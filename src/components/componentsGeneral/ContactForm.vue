@@ -1,8 +1,8 @@
 <template>
 
 
-<section class="contact_me pt-3">
-        <div class="inner-wrapper p-3 bg-light border border-secondary">
+<section class="contact_me pt-3 d-flex  justify-content-center">
+        <div class="inner-wrapper p-3 bg-light border border-secondary w-75">
             <div class="container-fluid text-center"> 
                 <div v-if="success" class="alert alert-success text-start" role="alert">
                     The message has been successfully sent!
